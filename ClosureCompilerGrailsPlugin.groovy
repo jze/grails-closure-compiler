@@ -1,6 +1,6 @@
 class ClosureCompilerGrailsPlugin {
     // the plugin version
-    def version = "0.9.2"
+    def version = "0.9.3"
     // the version or versions of Grails the plugin is designed for
     def grailsVersion = "1.3 > *"
     // the other plugins this plugin depends on
@@ -39,7 +39,7 @@ N.B. It builds/depends on the Grails Resources Plugin.
     def issueManagement = [ system: "Github", url: "https://github.com/oyvinmar/grails-closure-compiler/issues" ]
 
     // Online location of the plugin's browseable source code.
-    def scm = [ url: "https://github.com/oyvinmar/grails-closure-compiler" ]
+    def scm = [ url: "https://github.com/jze/grails-closure-compiler" ]
 
     def doWithSpring = {
         if (application.config.closurecompiler.compilation_level) {

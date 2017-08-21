@@ -12,11 +12,11 @@ grails.project.dependency.resolution = {
     }
 
     dependencies {
-        compile 'com.google.javascript:closure-compiler:v20131014'
+        compile 'com.google.javascript:closure-compiler:v20170806'
     }
 
     plugins {
-        compile(":resources:1.2.1")
+        compile(":resources:1.2.14")
         build(":release:3.0.1",
                 ":rest-client-builder:1.0.3") {
             export = false

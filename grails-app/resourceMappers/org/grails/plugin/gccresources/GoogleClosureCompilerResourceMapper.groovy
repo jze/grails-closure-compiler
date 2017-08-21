@@ -3,7 +3,7 @@ package org.grails.plugin.gccresources
 import org.grails.plugin.resource.mapper.MapperPhase
 import com.google.javascript.jscomp.Compiler
 import com.google.javascript.jscomp.CompilerOptions
-import com.google.javascript.jscomp.JSSourceFile
+import com.google.javascript.jscomp.SourceFile
 import com.google.javascript.jscomp.CompilationLevel
 import com.google.javascript.jscomp.Result
 import org.grails.plugin.resource.JavaScriptBundleResourceMeta
@@ -25,8 +25,9 @@ class GoogleClosureCompilerResourceMapper {
             return false
         }
 
-        JSSourceFile input = JSSourceFile.fromFile(resource.processedFile)
-        JSSourceFile extern = JSSourceFile.fromCode("/dev/null", "")
+
+        SourceFile input = SourceFile.fromFile(resource.processedFile)
+        SourceFile extern = SourceFile.fromCode("/dev/null", "")
 
         CompilerOptions options = new CompilerOptions();
 
